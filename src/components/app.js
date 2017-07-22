@@ -5,7 +5,7 @@ angular.module('video-player')
     this.videos = window.exampleVideoData;
     this.currentvideo = window.exampleVideoData[0];
     // console.log(this.videos);
-    // console.log(this);
+    // console.log(this)
     this.onclicktitle = (selectedvideo) => {
       this.currentvideo = selectedvideo;
     };
@@ -16,6 +16,12 @@ angular.module('video-player')
       this.videos = newvideos;
       this.currentvideo = newvideos[0];
     };
+    this.updateonchange = (query) => {
+      this.onsearch(query);
+    };
+
+    this.onsearch('default');
+
   },
 
   templateUrl: 'src/templates/app.html'

@@ -4,7 +4,7 @@ angular.module('video-player')
   // TODO
   bindings: {
     onsearch: '<',
-  
+    onkey: '<'
   },
 
   controller: function() {
@@ -12,6 +12,10 @@ angular.module('video-player')
     this.handlesearch = () => {
       this.onsearch(this.searchterm);
     };
+    this.handlechange = _.debounce(() => {
+      this.onkey(this.searchterm); 
+    }, 500);
+
   },
   templateUrl: 'src/templates/search.html'
 });
