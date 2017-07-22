@@ -4,7 +4,8 @@ angular.module('video-player')
   // TODO
   bindings: {
     onsearch: '<',
-    onkey: '<'
+    onkey: '<',
+    onautoplay: '<'
   },
 
   controller: function() {
@@ -15,6 +16,11 @@ angular.module('video-player')
     this.handlechange = _.debounce(() => {
       this.onkey(this.searchterm); 
     }, 500);
+    this.handlekeypress = ($event) => {
+      if ($event.keyCode === 13) {
+        this.handlesearch();
+      }
+    };
 
   },
   templateUrl: 'src/templates/search.html'

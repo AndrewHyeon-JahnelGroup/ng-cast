@@ -1,6 +1,8 @@
 <div class="search-bar form-inline">
-  <input class="form-control" type="text" ng-model="$ctrl.searchterm" ng-change="$ctrl.handlechange()"/>
+  <input class="form-control" type="text" ng-model="$ctrl.searchterm" ng-change="$ctrl.handlechange()" ng-keypress="$ctrl.handlekeypress($event)"/>
   <button class="btn" ng-click="$ctrl.handlesearch()">
     <span class="glyphicon glyphicon-search"></span>
   </button>
+  <input class="btn-autoplay" type="checkbox" ng-click="$ctrl.onautoplay()"> Autoplay</button>
 </div>
+

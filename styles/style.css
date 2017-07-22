@@ -19,7 +19,7 @@ body {
   background: #fff;
 }
 
-.search-bar .form-control {
+.search-bar .form-control { 
   border-radius: 2px;
   width: 80%
 }
@@ -82,6 +82,18 @@ body {
 
 .media-body {
   padding-left: 20px;
+}
+
+.btn-autoplay {
+  float: left;
+}
+
+#videonumberselect {
+  float: right;
+}
+
+#line{
+  float: left;
 }
 
 h5 {

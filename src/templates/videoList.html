@@ -1,4 +1,8 @@
 <ul class="video-list" >
-  <video-list-entry video='video' ng-repeat = 'video in $ctrl.videos' onclicktitle='$ctrl.onclicktitle'><h5><em>videoListEntry</em> component goes here</h5></video-list-entry>
-
+  <video-list-entry video='video' ng-repeat = 'video in $ctrl.toshowvideos' onclicktitle='$ctrl.onclicktitle'></video-list-entry>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" ng-repeat = "number in $ctrl.pagearray"><a><button ng-click="$ctrl.onpagination(number)"> {{number}} </button></a></li>
+      </ul>
+  </nav>
 </ul>

@@ -2,11 +2,11 @@ angular.module('video-player')
 
 .component('videoPlayer', {
   bindings: {
-    currentvideo: '<'
+    currentvideo: '<',
+    autoplay: '<'
   },
 
   controller: function() {
-    console.log(this, 'yes');
   },
   templateUrl: 'src/templates/videoPlayer.html'
 });
