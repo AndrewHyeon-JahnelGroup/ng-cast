@@ -3,9 +3,6 @@
     <div class="col-md-6 col-md-offset-3">
       <search onkey="$ctrl.updateonchange" onsearch="$ctrl.onsearch" onautoplay="$ctrl.onautoplay">
       </search>
-        <select ng-options="value for value in $ctrl.videolengthoptions" ng-model="$ctrl.numberonpage">
-        </select>
-        <p id = 'line'>Videos per page  &nbsp;</p>
     </div>
   </nav>
   <div class="row">
@@ -13,6 +10,9 @@
       <video-player currentvideo="$ctrl.currentvideo" autoplay="$ctrl.autoplay"></video-player>
     </div>
     <div class="col-md-5">
+        <p id = 'line'>Videos per page  &nbsp;</p>
+        <select id = 'resultcountdrop' ng-options="value for value in $ctrl.videolengthoptions" ng-model="$ctrl.numberonpage">
+        </select>
       <video-list toshowvideos="$ctrl.toshowvideos" onclicktitle="$ctrl.onclicktitle" onpagination="$ctrl.onpagination" numberpages="$ctrl.numberpages"></video-list>
     </div>  
   </div>
